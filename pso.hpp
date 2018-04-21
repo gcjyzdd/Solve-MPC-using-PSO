@@ -73,6 +73,14 @@ struct Solver_ARG
 	}
 };
 
+struct Solver_Result
+{
+	Input input;
+	State nextState;
+
+	Inputs guess;
+};
+
 struct Particle
 {
 	States state;
@@ -240,6 +248,7 @@ struct MPC_PSO_Solver
 		}
 	}
 
+	void calc_inertia_lin_dec();
 	void initSettings();
 	void setMPC(MPC_Setting &h_set);
 	void setPSO(PSO_Setting &h_set);
@@ -248,7 +257,7 @@ struct MPC_PSO_Solver
 	void updateFitnessPersonal();
 	void updateFitnessBest();
 	void updateInput();
-	void solve(Solver_ARG &h_arg, dtype *h_input);
+	void solve(Solver_ARG &h_arg, Solver_Result & rst);
 	void printInfo()
 	{
 		std::cout<<"*****Solve Model Predictive Control With Particle Swarm Optimization*****\n\n";
