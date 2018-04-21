@@ -1,11 +1,33 @@
 //
-// Copyright 2018 TASS International.
+// Author: Changjie Guan (changjieguan@gmail.com)
 //
-// All rights reserved.
 //
-// Author: Changjie Guan (changjie.guan@tassinternational.com)
+//BSD 2-Clause License
 //
-
+//Copyright (c) 2018, Changjie
+//All rights reserved.
+//
+//Redistribution and use in source and binary forms, with or without
+//modification, are permitted provided that the following conditions are met:
+//
+//* Redistributions of source code must retain the above copyright notice, this
+//  list of conditions and the following disclaimer.
+//
+//* Redistributions in binary form must reproduce the above copyright notice,
+//  this list of conditions and the following disclaimer in the documentation
+//  and/or other materials provided with the distribution.
+//
+//THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+//DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+//FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+//DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+//SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+//CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+//OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+//OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
 /*Particle Swarm Optimization
  * specially designed for model predictive control
  * */
@@ -261,6 +283,8 @@ struct MPC_PSO_Solver
 	void printInfo()
 	{
 		std::cout<<"*****Solve Model Predictive Control With Particle Swarm Optimization*****\n\n";
+		std::cout<<"#\n# Copyright (c) 2018, Changjie Guan.\n#\n# All rights reserved.\n#\n# Author: Changjie Guan (changjieguan@gmail.com)\n#\n\n\n";
+
 		std::cout<<"Swarm Size = "<<SWARM_SIZE<<", Horizon = "<<HORIZON <<std::endl;
 
 		std::cout<<"MAX_STEP = "<<m_pso_setting.MAX_STEP<<", tol = "<<m_pso_setting.tol<<std::endl;
